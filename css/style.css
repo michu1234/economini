@@ -274,7 +274,8 @@ button.tag:hover {
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.47);
 }
 button.readlater,
-button.loadmore {
+button.loadmore,
+button.loadmore4{
   background: white;
   color: #c62641;
   margin-right: 1.5rem;
@@ -302,7 +303,8 @@ button.loadmore {
   transition: all 0.1s ease-in-out;
 }
 button.readlater:hover,
-button.loadmore:hover {
+button.loadmore:hover,
+button.loadmore4:hover{
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.47);
 }
 .arrow-r,
@@ -319,7 +321,7 @@ button.loadmore:hover {
   color: rgba(0, 0, 0, 0.2);
   line-height: 120vh;
 }
-.loadmore2 {
+.loadmore2, .loadmore3 {
   text-align: center;
   padding: 100px;
 }
@@ -489,12 +491,14 @@ ul.socialmedia li:hover {
   height: auto;
   padding: 30px 0px 30px 0px;
 }
-.container .page .wrapper {
+.container .page .wrapper,
+.container .page .wrapper2{
   height: auto;
   margin: auto;
   width: 80%;
 }
-.container .page .wrapper p {
+.container .page .wrapper p,
+.container .page .wrapper2 p{
   text-align: justify;
   font-family: "Domine", serif;
   color: #333333;

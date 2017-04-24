@@ -1,7 +1,11 @@
 $(document).ready(function () {
-	// SLIDER ARROWS //
-	var counter = 0;
 
+	// SLIDER ARROWS //
+
+	var counter = 0;
+ if (counter === 0) {
+	 $(".arrow-r").hide("fast");
+ };
 	$(".arrow-l i").css("display", "none");
 	$(".arrow-l").on({
 		mouseenter: function () {
@@ -57,7 +61,11 @@ $(document).ready(function () {
 			};
 		}
 	, });
+
+	// SLIDER ARROWS //
+
 	// SLIDER DOTS //
+
 	$(".dots :first-child").click(function () {
 		$(".slider").animate({
 			marginLeft: "0%"
@@ -78,9 +86,13 @@ $(document).ready(function () {
 			marginLeft: "-300%"
 		}, 500);
 	});
+
 	// SLIDER'S HEADER FIRST LETTER //
+
 	//	document.write($("span").text());
+
 	// ASIDE ON/OFF //
+
 	$("aside").css("display", "none");
 	$("li.hamburger").click(function () {
 		$("aside").show("slow");
@@ -88,9 +100,11 @@ $(document).ready(function () {
 	$(".slider, .container").click(function () {
 		$("aside").css("display", "none");
 	});
+
 	// ASIDE ON/OFF //
 
 	// GET JSON //
+
 	var i = 0;
 	$.getJSON("https://api.myjson.com/bins/1dk197", function(obj){
 		$.each(obj, function(key, value){
@@ -99,6 +113,9 @@ $(document).ready(function () {
 			i++;
 		});
 	});
+
+	// GET JSON //
+
 	// LOAD MORE //
 
 $(".loadmore").click(function(){
@@ -112,17 +129,22 @@ $(".loadmore").click(function(){
 	});
 });
 
+	// LOAD MORE //
 
-
-
-
-
-
-
-
-
-
-
-
+	// POST'S LOAD MORE //
+	var json = ["https://api.myjson.com/bins/pzp4r", "https://api.myjson.com/bins/17i217"],
+	    counter2 = 0;
+	$(".loadmore4").click(function(){
+		$.getJSON(json[counter2], function(obj2){
+			$.each(obj2, function(key, value){
+				$("div.page").append("<hr>"+"<section class='excerpt'>"+"<div class='wrapper'>"+"<h2>"+value.title1+"</h2>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<button class='tag'>"+"pieniądze"+"</button>"+"<button class='tag'>"+"inwestowanie"+"</button>"+"</div>"+"</section>");
+				$(".loadmore3").before($("section.excerpt"));
+				counter2++;
+				if (counter2 === 2) {
+					$(".loadmore3").hide("fast");
+				}
+			});
+		});
+	});
 
 });
