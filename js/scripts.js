@@ -109,7 +109,7 @@ $(document).ready(function () {
 	$.getJSON("https://api.myjson.com/bins/1dk197", function(obj){
 		$.each(obj, function(key, value){
 
-			$("div.wrapper").eq(i).prepend("<h2>"+obj[i].title1+"</h2>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj[i].text1+"</p>"+"<button class='read'>"+"Czytaj więcej"+"</button>"+"<button class='readlater'>"+"Dodaj do zakładek"+"</button>");
+			$("div.wrapper").eq(i).prepend("<a href='post.html'>"+"<h2>"+obj[i].title1+"</h2>"+"</a>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj[i].text1+"</p>"+"<button class='read'>"+"<a href='post.html'>"+"Czytaj więcej"+"</a>"+"</button>"+"<button class='readlater'>"+"Dodaj do zakładek"+"</button>");
 			i++;
 		});
 	});
