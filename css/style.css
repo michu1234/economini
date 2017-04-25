@@ -586,7 +586,8 @@ footer {
 		width: 95%;
 		overflow-y: auto;
 	}
-	body .container .page .wrapper {
+	body .container .page .wrapper,
+	body .container .page .wrapper2{
 		width: 95%;
 	}
 	body header .slider .slide {
@@ -603,3 +604,10 @@ footer {
 		width: 100vw;
 	}
 }
+@media screen and (max-width: 440px){
+	.container .page .wrapper p,
+	.container .page .wrapper2 p {
+		text-align: left;
+	}
+
+
