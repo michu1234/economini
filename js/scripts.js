@@ -94,7 +94,7 @@ $(document).ready(function () {
 	// ASIDE ON/OFF //
 
 	$("aside").css("display", "none");
-	$("li.hamburger").click(function () {
+	$("li.hamburger, .hamburger3").click(function () {
 		$("aside").show("slow");
 	});
 	$(".slider, .container").click(function () {
@@ -137,7 +137,7 @@ $(".loadmore").click(function(){
 	$(".loadmore4").click(function(){
 		$.getJSON(json[counter2], function(obj2){
 			$.each(obj2, function(key, value){
-				$("div.page").append("<hr>"+"<section class='excerpt'>"+"<div class='wrapper'>"+"<h2>"+value.title1+"</h2>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<button class='tag'>"+"pieniądze"+"</button>"+"<button class='tag'>"+"inwestowanie"+"</button>"+"</div>"+"</section>");
+				$("div.page").append("<section class='excerpt'>"+"<div class='wrapper'>"+"<hr>"+"<h2>"+value.title1+"</h2>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<p>"+obj2[0].art1+"</p>"+"<button class='tag'>"+"pieniądze"+"</button>"+"<button class='tag'>"+"inwestowanie"+"</button>"+"</div>"+"</section>");
 				$(".loadmore3").before($("section.excerpt"));
 				counter2++;
 				if (counter2 === 2) {
@@ -146,5 +146,20 @@ $(".loadmore").click(function(){
 			});
 		});
 	});
+
+	// MENU COLORS //
+
+	$(document).scroll(500, function(){
+		$(".second li").on({
+			mouseenter: function(){
+				$(this).css("background", "#db445d");
+			},
+			mouseleave: function(){
+				$(this).css("background", "white");
+			},
+		});
+	} );
+
+
 
 });
