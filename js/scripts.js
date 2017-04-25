@@ -122,7 +122,7 @@ $(".loadmore").click(function(){
 	$.getJSON("https://api.myjson.com/bins/1dk197", function(obj){
 		$.each(obj, function(key, value){
 			var j = 0;
-			$("div.page").append("<hr>"+"<section class='excerpt'>"+"<div class='wrapper'>"+"<h2>"+obj[j].title1+"</h2>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj[j].text1+"</p>"+"<button class='read'>"+"Czytaj więcej"+"</button>"+"<button class='readlater'>"+"Dodaj do zakładek"+"</button>"+"</div>"+"</section>");
+			$("div.page").append("<hr>"+"<section class='excerpt'>"+"<div class='wrapper'>"+"<a href='post.html'>"+"<h2>"+obj[j].title1+"</h2>"+"</a>"+"<h4>"+value.autor+"</h4>"+"<p>"+obj[j].text1+"</p>"+"<button class='read'>"+"Czytaj więcej"+"</button>"+"<button class='readlater'>"+"Dodaj do zakładek"+"</button>"+"</div>"+"</section>");
 			$(".loadmore2").hide("slow");
 			j++;
 		});
