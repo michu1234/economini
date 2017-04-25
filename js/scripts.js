@@ -160,6 +160,11 @@ $(".loadmore").click(function(){
 		});
 	} );
 
+	// LTR / RTL //
+
+	$(".switch").click(function(){
+		$(".container, aside .about, aside .contact").toggleClass("rtl");
+	});
 
 
 });

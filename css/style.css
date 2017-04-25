@@ -435,6 +435,9 @@ ul.socialmedia li {
 ul.socialmedia li:hover {
   filter: hue-rotate(19deg) saturate(150%);
 }
+.rtl {
+	direction: rtl;
+}
 .or-spacer {
   margin: 70px auto 0px auto;
   width: 400px;
