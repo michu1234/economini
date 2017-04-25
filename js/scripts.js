@@ -97,7 +97,7 @@ $(document).ready(function () {
 	$("li.hamburger, .hamburger3").click(function () {
 		$("aside").show("slow");
 	});
-	$(".slider, .container").click(function () {
+	$(".slider, .container, .close").click(function () {
 		$("aside").css("display", "none");
 	});
 

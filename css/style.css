@@ -413,6 +413,8 @@ aside .title {
   height: 100px;
   width: 100%;
   background: #c62641;
+	display: flex;
+	justify-content: space-between;
 }
 aside .title img {
   padding: 30px 0px 0px 20px;
@@ -542,6 +544,11 @@ footer {
 .hamburger3 {
 	display: none;
 }
+.close {
+	display: none;
+	padding-top: 30px;
+	padding-left: 30px;
+}
 
 /* MEDIA QUERIES */
 
@@ -553,6 +560,16 @@ footer {
 @media screen and (max-width: 780px){
 	ul.menu {
 		display: none;
+	}
+	body aside {
+		width: 80vw;
+	}
+	i.close {
+		display: block;
+		padding-right: 20px;
+		font-size: 30px;
+		color: white;
+		z-index: 333333334444;
 	}
 	.hamburger3 {
 		display: block;
@@ -567,6 +584,7 @@ footer {
 	}
 	body .container .page {
 		width: 95%;
+		overflow-y: auto;
 	}
 	body .container .page .wrapper {
 		width: 95%;
@@ -578,5 +596,10 @@ footer {
 @media screen and (max-width: 750px){
 	body .container .page h2 {
 		font-size: 3rem;
+	}
+}
+@media screen and (max-width: 480px){
+	body aside {
+		width: 100vw;
 	}
 }
